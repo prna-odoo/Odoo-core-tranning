@@ -2,7 +2,7 @@
     'name': "Real Estate",
     'version': '15.0.1.0.0',
     'category': 'Category',
-    'depends': ['website'],
+    'depends': ['website','mail'],
     'author': "Pravin Nayee",
     'license': 'LGPL-3',
     'summary': 'Real estate module',
@@ -18,6 +18,8 @@
         "wizard/property_wizard_view.xml",
         "data/estate_property_data.xml",
         "views/estate_templates.xml",
+        "report/estate_property_templates.xml",
+        "report/estate_property_reports.xml",
 
     ],
 

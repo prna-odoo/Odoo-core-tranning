@@ -10,6 +10,7 @@
        'security/ir.model.access.csv',
        'views/extended_view.xml',
        #'views/res_users_views.xml',
+       'views/estate_extended_templates.xml'
    ],
 
    

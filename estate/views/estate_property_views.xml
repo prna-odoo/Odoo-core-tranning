@@ -33,24 +33,30 @@
 
                     <group>
                         <group id="header_left_group">
-                        
-                            <div class="o_td_label">
+                            
+                            
+
+                            <!-- <div class="o_td_label">
                                 <label for="name" string= "Name" />
-                            </div>
-                            <field name="name" nolabel="1" />
+                            </div> -->
+
+                            <h1><field name="name" nolabel="1" /></h1>
+                            <br></br>
+
+
                             <label for="expected_price" />
                             <field name="expected_price" nolabel="1"/>
                             
                             <label for="selling_price" />
                             <field name="selling_price" nolabel="1" />
-                            
 
                             <label for="property_type_id" string= "Property Type"/>
                             <field name="property_type_id" nolabel="1"/>
-                            <label for="property_type_id" string= "Tags"/>
-                            <field name="tag_ids" widget="many2many_tags" nolabel="1"/>
-                            
 
+
+                            <label for="tag_ids" string= "Tags"/>
+                            <field name="tag_ids" widget="many2many_tags" nolabel="1"/>
+    
 
                         </group>
 
@@ -61,8 +67,12 @@
                                 <field name="status" nolabel="1"/>-->
                                 <!-- <label for="image" string= "Image"/>
                                -->  
-                               <field name="image" widget="image" class="oe_avatar" nolabel="1"/>
+                            <field name="image" widget="image" class="oe_avatar" nolabel="1"/>
+
+                               
                             
+                            
+
                         </group> 
 
                         <!--<group>
@@ -131,11 +141,11 @@
                         </notebook>
                     </sheet>
 
-                    <!-- <div class="oe_chatter">
+                    <div class="oe_chatter">
                         <field name="message_follower_ids" groups="base.group_user"/>
                         <field name="activity_ids"/>
                         <field name="message_ids"/>
-                    </div> -->
+                    </div>
             </form>
         </field>
     </record>
@@ -151,11 +161,16 @@
                     <field name="status"/>
                     <field name="image" widget='image' class="oe_avatar"/>
                     <field name="id"/>
-                    <templates>
+                    <templates >
                         <t t-name="kanban-box">
-                            <div>
+                            <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_hr_kanban_record">
+                                <div class="o_kanban_image">
+                                    <field name="image" widget="image" class="oe_avatar" nolabel="1"/>
+                                </div>
                                 <div class="o_kanban_details">
-                                    <strong><field name="name"/></strong>
+                                     
+                                        <br></br>
+                                    <h3><field name="name"/></h3>
                                     <ul>
                                         <li><field name="date_availability"/></li>
                                         <li><field name="expected_price"/></li>

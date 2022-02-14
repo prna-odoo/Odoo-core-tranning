@@ -32,10 +32,10 @@ class EstateProperty(http.Controller):
                 'est2': request.env['estate.property'].sudo().search([], limit=8)
             })
 
-    # @http.route(['/property/<model("estate.property"):property>', '/property/<string:is_static>'], auth="public", website=True)
-    # def property_details(self, course=False, **kw):
-    #     if property:
-    #         return request.render('estate.property_details', {
-    #             'property': property,
-    #         })
-
+   
+    @http.route('/property/<model("estate.property"):property>', auth="public", website=True)
+    def property(self, property=False, **kw):
+        if property :
+                return request.render('estate.property_details',{
+                    'pr' :property
+                })

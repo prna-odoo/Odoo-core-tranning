@@ -11,6 +11,7 @@ access_estate_property_tag_Agent,access_estate_property_tag_Agent,model_estate_p
 access_estate_property_offer_Agent,access_estate_property_offer_Agent,model_estate_property_offer,estate.group_estate_user,1,1,1,1
 
 
+
 access_estate_property_Manager,access_estate_property_Manager,model_estate_property,estate.group_estate_manager,1,1,1,1
 
 
@@ -19,5 +20,7 @@ access_estate_property_offer_Manager,access_estate_property_offer_Manager,model_
 
 access_estate_property_type_Manager,access_estate_property_Manager,model_estate_property_type,estate.group_estate_manager,1,1,1,1
 
+estate.access_estate_property_wizard_Manager,access_estate_property_wizard_Manager,estate.model_property_wizard,base.group_user,1,1,1,1
 
 
+estate.access_estate_property_wizard_Agent,access_estate_property_wizard_Agent,estate.model_tag_wizard,base.group_user,1,1,1,1

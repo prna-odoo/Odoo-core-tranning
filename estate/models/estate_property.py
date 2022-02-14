@@ -1,4 +1,4 @@
-from odoo import models,fields, _, api
+from odoo import models, fields, _, api
 from datetime import datetime, timedelta, date
 from odoo.exceptions import UserError, ValidationError
 
@@ -18,8 +18,13 @@ class estate_property_tag(models.Model):
 class EstateProperty(models.Model):
     _name = "estate.property"
     _description = "estate property"
+    _inherit = [
+        'mail.thread',
+        'mail.activity.mixin',
+    ]
 
-    # _inherit = ['image.mixin','mail.thread','mail.activity.mixin',]
+
+
 
     def _get_description(self):
         if self.env.context.get('is_my_property'):
@@ -32,7 +37,7 @@ class EstateProperty(models.Model):
     image = fields.Binary('Course Image')
     date_availability = fields.Date(default = lambda self: fields.Datetime.now(), copy= False)
     expected_price = fields.Float()
-    selling_price = fields.Float(copy= False, readonly = True)
+    selling_price = fields.Float(copy=False, readonly=True)
     bedrooms = fields.Integer(default= 2)
     living_area = fields.Integer()
     facades = fields.Integer()
